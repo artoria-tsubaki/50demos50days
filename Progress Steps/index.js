@@ -4,37 +4,49 @@ let progress = document.querySelector("#progress")
 let circles = [...document.querySelectorAll(".circle")]
 
 
-let activeIndex = 0
+let obj = {
+    activeIndex: 0
+}
 
 preBtn.addEventListener("click", () => {
-    activeIndex--
-    countChangeEvent()
+    p.activeIndex--
+    // countChangeEvent()
 });
 
 nextBtn.addEventListener("click", () => {
-    activeIndex++
-    countChangeEvent()
+    p.activeIndex++
+    // countChangeEvent()
 });
 
+let p = new Proxy(obj, {
+    set: function (target, property, value, receiver) {
+        if(property === 'activeIndex') {
+            var res = Reflect.set(target, property, value, receiver)
+            countChangeEvent()
+            return res
+        }
+    }
+})
+
 function countChangeEvent() {
-    if(activeIndex == 0) {
+    if(p.activeIndex == 0) {
         preBtn.disabled = true
     } else {
         preBtn.disabled = false
     }
 
-    if(activeIndex == circles.length - 1) {
+    if(p.activeIndex == circles.length - 1) {
         nextBtn.disabled = true
     } else {
         nextBtn.disabled = false
     }
 
     circles.forEach((circle, index) => {
-        if(index <= activeIndex) {
+        if(index <= p.activeIndex) {
             circle.classList.add("active")
         } else {
             circle.classList.remove("active")
         }
     })
-    progress.style.width = activeIndex / (circles.length - 1) * 100 + '%'
+    progress.style.width = p.activeIndex / (circles.length - 1) * 100 + '%'
 }
