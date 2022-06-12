@@ -74,7 +74,8 @@ body {
 }
 
 .article-container .article {
-    padding: 50px 400px;
+    max-width: 1000px;
+    margin: 50px auto;
 }
 
 .article-container .article section {
