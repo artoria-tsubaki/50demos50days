@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    background-color: #333;
+    color: #222;
+}
+
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #fafafa;
+    padding: 50px;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+}
+
+.container.show-nav {
+    transform:  rotate(-20deg);
+}
+
+.circle-btns {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: violet;
+    position: relative;
+    transition: transform 0.5s linear;
+}
+
+.show-nav .circle {
+    transform: rotate(-70deg);
+}
+
+.circle button {
+    border: none;
+    outline: none;
+    position: absolute;
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+
+    cursor: pointer;
+    height: 100px;
+}
+
+.circle button#open {
+    left: 60%;
+}
+
+.circle button#close {
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.article-container {
+    width: 100%;
+}
+
+.article-container .article {
+    padding: 50px 400px;
+}
+
+.article-container .article section {
+    width: 100%;
+}
+
+nav {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+}
+
+.show-nav + nav ul{
+    transform: translateX(0px);
+}
+
+nav ul li {
+    list-style: none;
+    color: #fff;
+    margin: 20px;
+    margin-left: 15px;
+    font-size: 1.2rem;
+    transform: translateX(-100px);
+    transition: transform 0.8s linear;
+}
+.show-nav + nav ul li {
+    transform: translateX(0px);
+}
+
+nav ul li + li {
+    margin-left: 30px;
+    transform: translateX(-150px);
+}
+
+nav ul li + li + li {
+    margin-left: 45px;
+    transform: translateX(-200px);
+}
+
+nav li a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 10px;
+}
+
+header h3 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+header h6 {
+    margin: 0;
+    color: #ccc;
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+img {
+    width: 100%;
+}
