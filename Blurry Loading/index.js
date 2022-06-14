@@ -17,8 +17,6 @@ function load() {
     bg.style.filter = `blur(${scale(loading, 0, 100, 30, 0)}px)`
 }
 
-load()
-
 function scale(num, in_min, in_max, out_min, out_max) {
     return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
