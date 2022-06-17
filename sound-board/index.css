@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: violet;
+}
+
+.board-list {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.board-list .board-item {
+  padding: 25px 70px;
+  background-color: rgba(0, 0, 0, .4);
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: transform 0.5s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.board-list .board-item.active {
+  border: 3px solid #f1c40f;
+  font-size: 1.5rem;
+  transform: scale(1.2);
+}
