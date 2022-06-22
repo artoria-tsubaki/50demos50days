@@ -9,7 +9,7 @@ function keyDownHandler (e) {
   const html = `<div class="entered">
     <div class="key-item">
       <div class="title">event.key</div>
-      <div class="card">${e.key}</div>
+      <div class="card">${e.key === ' ' ? 'Space' : e.key}</div>
     </div>
     <div class="key-item">
       <div class="title">event.keyCode</div>
