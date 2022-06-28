@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+
+:root {
+  --border-color: #144fc6;
+  --fill-color: #6ab3f8;
+  --bgc-color: #3494e4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--bgc-color);
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 0 8px;
+}
+
+.container h1 {
+  margin-bottom: 0;
+}
+
+.container h3 {
+  font-weight: normal;
+}
+
+.container .sum-box {
+  height: 350px;
+  width: 150px;
+  border: 5px solid var(--border-color);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.sum-box .remained {
+  width: 100%;
+  background-color: #fff;
+  height: 100%;
+  visibility: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--border-color);
+  font-weight: bold;
+  transition: height 0.2s linear;
+}
+
+.sum-box .per {
+  height: 0;
+  width: 100%;
+  visibility: hidden;
+  background-color: var(--fill-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--border-color);
+  transition: height 0.2s linear;
+}
+
+.container p {
+  text-align: center;
+}
+
+.container .water-box {
+  width: 280px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.water-box .water-item {
+  height: 95px;
+  width: 50px;
+  border: 3px solid var(--border-color);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: var(--border-color);
+  transition: background-color 0.1s linear;
+}
+.water-box .water-item.fill {
+  background-color: var(--fill-color);
+}
