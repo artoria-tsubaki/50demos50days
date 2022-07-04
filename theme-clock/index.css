@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:300&display=swap');
+
+:root {
+  --dark-bg-color: #000;
+  --dark-font-color: #fff;
+  --light-bg-color: #fff;
+  --light-font-color: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Heebo', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--light-bg-color);
+  transition: .4s ease;
+  margin: 0;
+}
+
+body.dark {
+  background-color: var(--dark-bg-color);
+}
+
+button.toggle {
+  border: 0;
+  padding: 8px 12px;
+  border-radius:4px;
+  background-color: var(--dark-bg-color);
+  color: var(--dark-font-color);
+  position: absolute;
+  top: 100px;
+}
+
+.toggle:focus {
+  outline: none;
+}
+
+.dark button.toggle {
+  background-color: var(--light-bg-color);
+  color: var(--light-font-color);
+}
+
+.time-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clock {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  z-index: -1;
+}
+
+.clock .needle {
+  width: 3px;
+  height: 25%;
+  background-color: var(--light-font-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%) rotate(0deg);
+  transform-origin: bottom  center;
+  transition: all 0.5s ease-in;
+}
+
+.clock .needle.minute {
+  height: 35%;
+}
+
+.clock .needle.second {
+  height: 40%;
+  background-color: red;
+}
+
+.clock .center-point {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--dark-bg-color);
+  transition: all 0.5s ease-in;
+}
+
+.dark .needle {
+  background-color: var(--dark-font-color);
+}
+
+.dark .center-point {
+  background-color: var(--dark-font-color);
+}
+
+.time {
+  color: var(--light-font-color);
+  font-size: 3.5rem;
+}
+
+.dark .time {
+  color: var(--dark-font-color);
+}
+
+.date {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+.date .highlight {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  border-radius: 50%;
+  font-size: 12px;
+  background-color: var(--dark-bg-color);
+  color: var(--dark-font-color);
+  line-height: 18px;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.dark .date .highlight {
+  background-color: var(--light-bg-color);
+  color: var(--light-font-color);
+}
