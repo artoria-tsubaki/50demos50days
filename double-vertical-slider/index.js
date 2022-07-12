@@ -6,7 +6,7 @@ const slideLength = document.querySelectorAll('.left-slide>div').length
 
 let activeSlideIndex = 0
 
-rightSlide.style.transform = `translateY(-${(slideLength - 1) * 100}vh)` // -300 -- 0
+rightSlide.style.transform = `translateY(${(slideLength - 1) * 100}vh)` // -300 -- 0
 
 downBtn.addEventListener('click', downBtnHandler)
 upBtn.addEventListener('click', upBtnHandler)
@@ -30,9 +30,9 @@ function upBtnHandler() {
 }
 
 function leftSlideContainerMove() {
-    leftSlide.style.transform = `translateY(-${activeSlideIndex * 100}vh)`
+    leftSlide.style.transform = `translateY(${activeSlideIndex * 100}vh)`
 }
 
 function rightSlideContainerMove() {
-    rightSlide.style.transform = `translateY(-${(slideLength - 1 - activeSlideIndex) * 100}vh)`
+    rightSlide.style.transform = `translateY(${(slideLength - 1 - activeSlideIndex) * 100}vh)`
 }
