@@ -18,6 +18,7 @@ body {
 .container .left-slide {
     height: 100%;
     width: 35%;
+    position: relative;
     /* transform: translateY(300vh); */
     transition: transform .5s linear;
 }
