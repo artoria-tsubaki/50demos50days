@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loveMe {
+  background: url("https://img-1302665742.cos.ap-shenzhen-fsi.myqcloud.com/2020/07/tiv_autumn.png") no-repeat center center;
+  background-size: 100% 100%;
+  max-width: 100%;
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  cursor: pointer;
+  position: relative;
+}
+
+.fa-heart {
+  color: red;
+}
+
+.heart {
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0);
+  animation: showHeart 0.5s ease-in-out;
+}
+
+@keyframes showHeart {
+  to {
+    transform: translate(-50%, -50%) scale(10);
+    opacity: 0;
+  }
+}
