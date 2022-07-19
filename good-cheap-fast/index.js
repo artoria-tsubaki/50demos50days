@@ -1,6 +1,3 @@
-const good = document.querySelector('#good')
-const cheap = document.querySelector('#cheap')
-const fast = document.querySelector('#fast')
 const toggles = document.querySelectorAll('.toggle')
 
 let checkedValue = []
@@ -19,7 +16,7 @@ function doTheTrick (theClickedOne) {
   } else {
     checkedValue.push(theClickedOne.id)
   }
-
+  
   if (checkedValue.length >= 3) {
     document.querySelector(`#${checkedValue.shift()}`).checked = false
   }
