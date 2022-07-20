@@ -75,6 +75,10 @@ body {
   font-size: 1.2rem;
 }
 
+.main p {
+  margin: 20px;
+}
+
 textarea:focus {
   outline: none;
 }
