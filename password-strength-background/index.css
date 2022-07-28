@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg {
+  background: url(https://images.unsplash.com/photo-1556745757-8d76bdb6984b) no-repeat center center/cover;
+  position: absolute;
+  left: -20px;
+  right: -20px;
+  top: -20px;
+  bottom: -20px;
+  z-index: -1;
+  filter: blur(20px);
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card h1 {
+  font-weight: normal;
+  margin: 5px;
+}
+
+.card span {
+  color: #4a5568;
+}
+
+.card #form {
+  margin: 20px 0;
+  width: 100%;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-item label {
+  margin: 10px 0;
+}
+
+.form-item input{
+  width: 100%;
+  padding: 15px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#form button {
+  margin-top: 30px;
+  width: 100%;
+  border: 0;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 16px;
+  border-radius: 5px;
+}
