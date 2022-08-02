@@ -2,8 +2,9 @@ const userListEl = document.querySelector('.user-list');
 const searchEl = document.querySelector('#filter')
 
 const userListItems = []
+const betterFn = debounce((e) => filterUserList(e.target.value), 500, true)
 
-searchEl.addEventListener('input', (e) => filterUserList(e.target.value))
+searchEl.addEventListener('input', betterFn)
 
 getUserListData()
 
@@ -36,7 +37,6 @@ function renderUserList (data) {
 }
 
 function filterUserList (filterText) {
-  console.log('input');
   userListItems.forEach(item => {
     if (item.innerText.toLowerCase().includes(filterText.toLowerCase())) {
       item.classList.remove('hidden')
@@ -44,4 +44,28 @@ function filterUserList (filterText) {
       item.classList.add('hidden')
     }
   })
+}
+
+function debounce(fn, wait, triggeNow) {
+  let t = null;
+  return function() {
+    const _self = this;
+    const args = arguments;
+    if(t) {
+      clearTimeout(t); 
+    }
+    if(triggeNow) {
+      const exec = !t;
+      t = setTimeout(()=> {
+        t = null
+      }, wait)
+      if(exec) {
+        fn.apply(_self,args)
+      }
+    }else {
+      t = setTimeout(()=> {
+      	fn.apply(_self,args)
+    	}, wait)
+    }
+  }
 }
