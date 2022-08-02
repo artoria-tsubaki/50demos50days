@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #fef9f2;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  max-width: 400px;
+  padding: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); 
+  background-color: #fff;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+  padding: 0 10px;
+  line-height: 20px;
+}
+
+.emotion-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.emotion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  transition: all 0.2s linear;
+  width: 100px;
+  margin: 5px;
+}
+
+.emotion.selected {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.emotion small {
+  margin-top: 5px;
+}
+
+.submit {
+  margin-top: 20px;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .8);
+  text-align: center;
+  padding: 15px 30px;  
+}
+
+.heart {
+  margin-bottom: 10px;
+}
+
+strong {
+  line-height: 20px;
+}
+
+.info {
+  text-align: center;
+}
